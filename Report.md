@@ -58,7 +58,7 @@ becomes inefficient as the graph grows.
 
 Pseudocode:
 
-NAIVE_MST(n):
+naive_mst(n):
 
     buildings ← generate n random points
 
@@ -96,7 +96,7 @@ NAIVE_MST(n):
 
     return mst_edges, mst_cost
 
-HAS_PATH_DFS(adj, current, target, visited):
+has_path_dfs(adj, current, target, visited):
 
     if current = target:
         return true
@@ -128,14 +128,14 @@ MAKE_UNION_FIND(n):
 
     return (parent, rank)
 
-FIND(uf, x):
+find(uf, x):
 
     if parent[x] ≠ x:
         parent[x] ← FIND(uf, parent[x])
 
     return parent[x]
 
-UNION(uf, x, y):
+union(uf, x, y):
 
     rootX ← FIND(uf, x)
     rootY ← FIND(uf, y)
@@ -153,7 +153,7 @@ UNION(uf, x, y):
 
     return true
 
-OPTIMIZED_MST(n):
+optimized_mst(n):
 
     buildings ← generate n random points
 
@@ -225,4 +225,5 @@ Naive MST:
 Optimized MST:
 - The correct choice for real-world problems
 - Efficient for large-scale graphs
+
 
